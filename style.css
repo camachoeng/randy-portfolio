@@ -1,0 +1,345 @@
+/* Theme variables */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg: #fff;
+  --header-bg: #333;
+  --header-text: #fff;
+  --footer-bg: #333;
+  --footer-text: #fff;
+  --button-bg: #0078d7;
+  --button-hover: #005fa3;
+}
+
+.dark-theme {
+  --bg-color: #181a1b;
+  --text-color: #f4f4f4;
+  --card-bg: #23272a;
+  --header-bg: #23272a;
+  --header-text: #fff;
+  --footer-bg: #23272a;
+  --footer-text: #fff;
+  --button-bg: #444e5a;
+  --button-hover: #222b36;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#todo-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+}
+
+#taskInput, #addBtn {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task-checkbox {
+  margin-top: 0.5rem;
+  float: right;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.completed::before {
+  content: "✔ ";
+  color: green;
+}
+
+.edit-btn, .delete-btn {
+  margin: 0 0.2rem 0 0.2rem;
+  padding: 0.4rem 0.6rem;
+  float: right;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.edit-btn:hover {
+  color: #0077cc;
+}
+
+.delete-btn:hover {
+  color: #e60000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.task-item {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.task-item:hover {
+  background-color: var(--button-bg);
+}
+
+form {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+#formMessage {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+
+#theme-toggle {
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 4px 10px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  background: var(--button-bg);
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background: var(--button-hover);
+}
+
+/* Modal for enlarged gallery image */
+.img-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img-modal-content {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  margin-bottom: 16px;
+}
+.img-modal-close {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.2s;
+}
+.img-modal-close:hover {
+  color: #ff5252;
+}
+.img-modal-caption {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+/* Gallery Styles */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  margin-top: 24px;
+}
+
+
+.gallery-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 24px 32px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+.gallery-card:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+.gallery-card img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.filter-buttons button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 4px;
+  background: var(--button-bg);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.filter-buttons button:hover {
+  background: var(--button-hover);
+}
+.slider-btn{
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: var(--button-bg);
+  color: #fff;
+  transition: background-color 0.2s;
+}
+.slider-btn:hover {
+  background-color: var(--button-hover);
+}
+/* Responsive Design: Media Queries */
+
+/* Phones (max-width: 600px) */
+@media (max-width: 600px) {
+  /* Example: Make text smaller on phones */
+  body {
+    font-size: 16px;
+    padding: 8px;
+  }
+  /* Add more phone-specific styles here */
+}
+
+/* Tablets (min-width: 601px) and (max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  body {
+    font-size: 18px;
+    padding: 16px;
+  }
+  /* Add more tablet-specific styles here */
+}
+
+/* Desktops (min-width: 901px) */
+@media (min-width: 901px) {
+  body {
+    font-size: 20px;
+    padding: 24px;
+  }
+  /* Add more desktop-specific styles here */
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 40px 30px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--bg-color);
+}
+
+section {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Randy's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+      <h1>Randy Camacho</h1>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Randy Camacho—a Computer Engineer originally from Cuba, now living in St. Louis. I’m passionate about technology, personal growth, and building tools that serve communities. After years of entrepreneurial experience and teaching Kundalini Yoga, I’m now focused on re-entering the tech world with a fresh perspective.
+    </p>
+    <p>
+      I’ve built several hands-on projects including a yoga website, a to-do list app, a calculator, and I’m currently working on my personal portfolio. I’m confident in HTML, CSS, and JavaScript, and I’m actively learning responsive design and mobile-first principles to make my sites shine on any device.
+    </p>
+    <p>
+      I’ve started exploring GitHub and cloud technologies like AWS to understand how modern web apps are deployed and managed. My goal is to keep growing, keep building, and eventually blend my technical and wellness backgrounds to create meaningful digital experiences.
+    </p>
+  </section>
+
+
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Kundalini Yoga Website</strong> – Community-focused site with gallery, schedule, blog, and testimonials.</li>
+      <li><strong>To-Do List App</strong> – Simple task manager built with JavaScript.</li>
+      <li><strong>Calculator</strong> – Functional calculator using HTML, CSS, and JS.</li>
+    </ul>
+  </section>
+
+  <section id="gallery-section">
+    <h2>Project Gallery</h2>
+    <div id="filter-buttons" class="filter-buttons"></div>
+    <div id="gallery" class="gallery"></div>
+  </section>
+
+  <section id="todo">
+    <h2>To-Do List App</h2>
+    <div id="todo-container">
+      <input type="text" id="taskInput" placeholder="Add a task" />
+      <button id="addBtn">Add</button>
+      <ul id="taskList"></ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" autocomplete="on">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>        
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+      <p id="form-message"></p>            
+    </form>        
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/randy-camacho-eng" target="_blank">randy-camacho-eng</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Randy Camacho</p>
+  </footer>
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
+
+  
