@@ -22,26 +22,26 @@ const projects = [
     title: 'My Portfolio',
     category: 'Web',
     images: [
-      'images/portfolio1.png',
-      'images/portfolio2.png'
+      './images/portfolio1.png',
+      './images/portfolio2.png'
     ]
   },
   {
     title: 'ACIKY Yoga para Todos',
     category: 'Yoga',
     images: [
-      'images/aciky1.png',
-      'images/aciky2.png',
-      'images/aciky3.png',
-      'images/aciky4.png',
-      'images/aciky5.png'
+      './images/aciky1.png',
+      './images/aciky2.png',
+      './images/aciky3.png',
+      './images/aciky4.png',
+      './images/aciky5.png'
     ]
   },
   {
     title: 'To-Do List',
     category: 'Web',
     images: [
-      'images/todo.png'
+      './images/todo.png'
     ]
   }
 ];
