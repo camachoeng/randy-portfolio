@@ -5,7 +5,7 @@ Welcome! I'm a Computer Engineer and Yoga Instructor blending wellness and tech.
 ## Projects
 - 🧘 ACIKY (Asociación Cubana de Instructores de Kundalini Yoga) Website
 - ✅ To-Do List App with localStorage
-- 🧮 Calculator App
+- 🧮 Calculator  App
 - 📦 Portfolio Website (this one!)
 
 ## Skills
