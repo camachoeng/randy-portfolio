@@ -1,4 +1,4 @@
-import { saveTasks, loadTasks } from "/scripts/storage.js";
+import { saveTasks, loadTasks } from "./storage.js";
 
 const addBtn = document.querySelector("#addBtn");
 const taskInput = document.querySelector("#taskInput");
